@@ -21,8 +21,8 @@ When you click the **Knit** button a document will be generated that includes bo
 
 ```{r}
 library(devtools);
-source_url("functions/libraries.R");
-source_url("functions/functions-imdb.R");
+source_url("https://raw.githubusercontent.com/MonteShaffer/WSU_STATS419_FALL2020/master/functions/libraries.R");
+source_url("https://raw.githubusercontent.com/MonteShaffer/WSU_STATS419_FALL2020/master/functions/functions-imdb.R");
 
 
 ```
