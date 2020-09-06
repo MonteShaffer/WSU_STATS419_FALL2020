@@ -8,4 +8,4 @@ library(tractor.base);  # implode
 
 library(stringr);
 library(rvest);			# imdb web scraping
-library(devtools);  # this allos for source_url(githublink)
+
