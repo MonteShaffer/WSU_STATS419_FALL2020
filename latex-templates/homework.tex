@@ -19,8 +19,16 @@
 
 %%% default RStudio packages %%%
 \usepackage[unicode=true]{hyperref}
+
+
+
+
 \usepackage[usenames,dvipsnames]{color}
 \usepackage{listings}
+% xcolor ... #rrggbb ... 
+
+
+
 
 
 $if(listings)$
@@ -42,8 +50,9 @@ $endif$
 % https://github.com/svmiller/svm-r-markdown-templates/blob/master/svm-latex-memo.tex
 
 
-\usepackage[sort]{natbib}  %% will alpha/numeric in order inline
-	\setcitestyle{aysep={}} %% no year, comma just year
+%\usepackage[sort]{natbib}  %% will alpha/numeric in order inline
+%	\setcitestyle{aysep={}} %% no year, comma just year
+\usepackage[numbers]{natbib}
 	
 	
 \newcommand{\hmwkCourse}{ \textbf{$course$} }
@@ -84,44 +93,24 @@ $endif$
 
 
 
+
+\hypersetup{breaklinks=true,%
+            bookmarks=true,%
+            pdfauthor={$author$},%
+            pdftitle={$title$},%
+            colorlinks=true,%
+            citecolor=$if(citecolor)$$citecolor$$else$blue$endif$,%
+            urlcolor=$if(urlcolor)$$urlcolor$$else$blue$endif$,%
+            linkcolor=$if(linkcolor)$$linkcolor$$else$magenta$endif$,%
+            pdfborder={0 0 0}%
+            }%
+            
+
+
 \begin{document}
 
 \maketitle
 
-%\begin{abstract}
-%The abstract text goes here.
-%\end{abstract}
-
-\section{Introduction}
-Here is the text\footnote{Here is a footnote} of your introduction.
-
-Malcolm Gladwell talks about outliers \citep{Gladwell:2008}.
-
-\begin{equation}
-    \label{simple_equation}
-    \alpha = \sqrt{ \beta }
-\end{equation}
-
-\subsection{Subsection Heading Here}
-Write your subsection text here.
-
-\begin{figure}
-    \centering
-    \includegraphics[width=3.0in]{./../latex-templates/full-example/graphics/myfigure}
-    \caption{Simulation Results}
-    \label{simulationfigure}
-\end{figure}
-
-
-\begin{figure}
-    \centering
-    \includegraphics[width=3.0in]{./../latex-templates/full-example/graphics/pdffigure}
-    \caption{Simulation Results PDF}
-    \label{simulationfigurepdf}
-\end{figure}
-
-\section{Conclusion}
-Write your conclusion here.
 
 
 $body$
@@ -130,7 +119,7 @@ $body$
 
 
 \newpage
-\bibliographystyle{./../biblio/chicagoAMA}
+\bibliographystyle{./../biblio/chicago}
 \bibliography{./../biblio/master} % this is master.bib located in the biblio subfolder ... you could have multiple files here if need be ... one is easier ...
 
 

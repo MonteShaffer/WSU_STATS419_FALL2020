@@ -207,6 +207,12 @@ grabFilmsForPerson = function(nmid)
   url = paste("https://www.imdb.com/filmosearch/?explore=title_type&role=",nmid,"&ref_=filmo_ref_typ&sort=num_votes,desc&mode=detail&page=1&title_type=movie", sep="");
 
   page1 = read_html(url);
+    # imdb
+    #     nmid/$nmid/
+    #       - top-by-votes_01.html
+    #     ttid
+    # imdb/$md5/page_01.html  ... $md5 = md5(url);
+  
   result = list();
   ## useful for other data purposes
   result$nmid = nmid;
