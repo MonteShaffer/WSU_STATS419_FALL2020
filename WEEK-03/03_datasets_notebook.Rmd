@@ -17,7 +17,7 @@ my-var: "monte"  # https://bookdown.org/yihui/rmarkdown/html-document.html
 library(devtools);
 my.source = 'local';
 local.path = "C:/_git_/WSU_STATS419_FALL2020/";
-local.data.path = ""
+local.data.path = "R:/WSU_STATS419_FALL2020/";
 source( paste0(local.path,"functions/libraries.R"), local=T );
 
 

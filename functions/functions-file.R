@@ -8,3 +8,9 @@ createDir = function (folder)
 # logging functions ... functions-log.R
 
 
+storeToFile = function (str,myfile)
+	{
+	cat(str, file=myfile,append=F);	
+	}
+	
+	
