@@ -9,3 +9,40 @@
 "8f2a765187594755f64c8d11bf34a3cc"|2010|10|67|3.4
 "3605e776744be0d11583305b0ede6419"|2013|40|280|4.2
 "3b87bffacdd35679a992eadf816120a2"|2010|31|216|3.4
+
+
+x = read.table(file = "clipboard", sep = "|", header=TRUE);
+
+
+sortDataFrameByNumericColumns = function (ddf, mycols, direction="DESC")
+    {
+    n.cols = length(mycols);
+    n.dirs = length(direction);
+    sdf = ddf;
+    
+    vecs = matrix(NA, nrow=dim(sdf)[1],ncol=n.cols);
+    
+    for(i in 1:n.cols)
+        {
+        idx = which( names(sdf)== mycols[i] );
+        dir = if(n.dirs==1) { direction } else { if(is.na(direction[i]) {direction} else { direction[i]}};
+        
+        if(dir == "ASC")
+            {
+            vecs[,i] = sdf[,idx];
+            } else {  
+                    # DESC
+                    vecs[,i] = -sdf[,idx];
+                    }       
+        }   
+        
+		## how I want it, doesn't work
+        #fdf = sdf[order(vecs), ];
+		## non-variadic approach, does work
+		fdf = sdf[order( vecs[,1],vecs[,2],vecs[,3] ), ];
+        
+        
+    fdf;
+    }
+	
+	

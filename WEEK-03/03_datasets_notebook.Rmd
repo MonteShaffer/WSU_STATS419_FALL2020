@@ -39,6 +39,8 @@ myMatrix = matrix ( c (
 											), nrow=3, byrow=T);
 
 
+# dput(myMatrix);
+# https://mathematica.stackexchange.com/questions/27083/visualization-of-bivariate-distributions
 ```
 
 
